@@ -2,11 +2,14 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+import { HeroDetailComponent } from '../pages/hero-detail/hero-detail';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    HeroDetailComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp),

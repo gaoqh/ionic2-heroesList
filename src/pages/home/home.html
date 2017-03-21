@@ -1,14 +1,14 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<h1>{{title}}</h1>
+<h2>My Heroes</h2>
+<ul class="heroes">
+    <!--*前缀表示<li>及其子元素组成了一个主控模板。
+        引号中赋值给ngFor的那段文本表示“从heroes数组中取出每个英雄，
+        存入一个局部的hero变量，并让它在相应的模板实例中可用”。-->
+    <li *ngFor="let hero of heroes" 
+    [class.selected]="hero === selectedHero" 
+    (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+</ul>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+<page-hero-detail [hero]="selectedHero"></page-hero-detail>
