@@ -1,6 +1,6 @@
 import { Component, Input} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Hero } from '../../components/hero';
+import { Hero } from '../../models/hero';
 /*
   Generated class for the HeroDetail page.
 
