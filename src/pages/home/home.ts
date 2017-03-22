@@ -1,37 +1,22 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { Hero } from '../../models/hero';
-import { HeroDetailComponent } from '../hero-detail/hero-detail';
-import { HeroService } from '../../providers/hero-service';
-import { OnInit } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
 
+/*
+  Generated class for the Home page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+*/
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html',
-  providers: [HeroService]
+  templateUrl: 'home.html'
 })
-export class HomePage implements OnInit {
-    ngOnInit(): void {
-      this.getHeroes()
-    }
+export class HomePage {
 
-  title = 'Tour of Heroes';
-  heroes: Hero[];
-  selectedHero: Hero;
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
-  constructor(public navCtrl: NavController, private heroService: HeroService) {
-    
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
   }
 
-  getHeroes() {
-    this.heroService.getHeroes().then(heroes =>
-    this.heroes = heroes
-    );
-  }
-
-  onSelect(hero: Hero) {
-    this.selectedHero = hero
-    console.log(hero.name)
-  }
 }
-
