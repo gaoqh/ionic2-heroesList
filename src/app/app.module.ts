@@ -15,14 +15,8 @@ import { RouterModule } from '@angular/router';
     HeroesComponent
   ],
   imports: [
-    // IonicModule.forRoot(MyApp),
-    FormsModule,
-    RouterModule.forRoot([
-  {
-    path: 'heroes',
-    component: HeroesComponent
-  }
-])
+    IonicModule.forRoot(MyApp),
+    FormsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
