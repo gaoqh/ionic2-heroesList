@@ -1,4 +1,14 @@
 <h2>My Heroes</h2>
+<p>The hero's birthday is {{ birthday | date:format | uppercase}}</p>
+<p>Hero's power is {{2 | powerup: 10}}</p>
+  <button (click)="toggleFormat()">Toggle Format</button>
+<div>Normal power: <input [(ngModel)]="power"></div>
+<div>Boost factor: <input [(ngModel)]="factor"></div>
+<p>
+      Super Hero Power: {{power | powerup: factor}}
+</p>
+
+
 <ul class="heroes">
     <!--*前缀表示<li>及其子元素组成了一个主控模板。
         引号中赋值给ngFor的那段文本表示“从heroes数组中取出每个英雄，

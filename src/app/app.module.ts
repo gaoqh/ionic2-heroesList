@@ -7,12 +7,15 @@ import { HeroDetailComponent } from '../pages/hero-detail/hero-detail';
 import { HeroesComponent } from '../pages/heroes/heroes';
 import { HeroService } from '../providers/hero-service';
 import { RouterModule } from '@angular/router';
+import { Powerup } from "../pipes/powerup";
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     HeroDetailComponent,
-    HeroesComponent
+    HeroesComponent,
+    Powerup
   ],
   imports: [
     IonicModule.forRoot(MyApp),

@@ -14,6 +14,8 @@ export class HeroesComponent implements OnInit {
       this.getHeroes()
     }
 
+
+
   heroes: Hero[];
   selectedHero: Hero;
 
@@ -31,5 +33,15 @@ export class HeroesComponent implements OnInit {
     this.selectedHero = hero
     console.log(hero.name)
   }
+
+  //test pipe属性
+  birthday = new Date(1988, 3, 15); // April 15, 1988
+  toggle = true; // start with true == shortDate
+
+  get format()   { return this.toggle ? 'shortDate' : 'fullDate'; }
+  toggleFormat() { this.toggle = !this.toggle; }
+
+  power = 5;
+  factor = 1;
 }
 
