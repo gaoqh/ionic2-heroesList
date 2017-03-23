@@ -12,8 +12,10 @@ import { NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-
+  title = 'Tour of Heroes';
   constructor(public navCtrl: NavController, public navParams: NavParams) {}
+
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad HomePage');

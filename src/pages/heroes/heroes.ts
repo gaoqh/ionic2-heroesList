@@ -14,7 +14,6 @@ export class HeroesComponent implements OnInit {
       this.getHeroes()
     }
 
-  title = 'Tour of Heroes';
   heroes: Hero[];
   selectedHero: Hero;
 

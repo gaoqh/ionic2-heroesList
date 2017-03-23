@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from '../pages/hero-detail/hero-detail';
 import { HeroesComponent } from '../pages/heroes/heroes';
 import { HeroService } from '../providers/hero-service';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     MyApp,
@@ -14,8 +15,14 @@ import { HeroService } from '../providers/hero-service';
     HeroesComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
-    FormsModule
+    // IonicModule.forRoot(MyApp),
+    FormsModule,
+    RouterModule.forRoot([
+  {
+    path: 'heroes',
+    component: HeroesComponent
+  }
+])
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -24,4 +31,5 @@ import { HeroService } from '../providers/hero-service';
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, HeroService]
 })
+
 export class AppModule {}
